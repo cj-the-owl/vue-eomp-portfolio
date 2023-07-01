@@ -1,10 +1,16 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <navbar-comp/>
   <router-view/>
 </template>
+
+<script>
+  import navbarComp from "./components/navbar-comp.vue";
+
+  export default {
+    components: {navbarComp}
+  }
+
+</script>
 
 <style>
 #app {
@@ -13,6 +19,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 
 nav {
