@@ -44,7 +44,6 @@ template {
 #more-button {
   border-radius: 30px;
   background-color: #fff;
-  color: ;
 }
 
 .content {
