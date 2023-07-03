@@ -1,29 +1,31 @@
 <template>
   <navbar-comp/>
   <router-view/>
+  <footer-comp/>
 </template>
 
 <script>
+import FooterComp from './components/footer-comp.vue';
   import navbarComp from "./components/navbar-comp.vue";
 
   export default {
-    components: {navbarComp}
+    components: {navbarComp, FooterComp}
   }
 
 </script>
-
 <style>
+body {
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  font-family: 'Kiwi Maru', serif;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 100vh;
 }
 
 nav {
