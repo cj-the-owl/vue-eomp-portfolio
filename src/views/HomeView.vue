@@ -44,6 +44,13 @@ template {
 #more-button {
   border-radius: 30px;
   background-color: #fff;
+  color: black;
+  
+}
+
+#more-button:hover {
+  background-color: black;
+  color: #fff;
 }
 
 .content {

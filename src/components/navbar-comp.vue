@@ -7,7 +7,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <router-link class="nav-link active" to="/">Home</router-link>
+                        <router-link class="nav-link" to="/">Home</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/about">About</router-link>
@@ -53,5 +53,12 @@
             border: 1px solid rgba(255, 255, 255, 0.25);
             border-top: 1px solid rgba(255, 255, 255, 0.5);
             border-left: 1px solid rgba(255, 255, 255, 0.5); 
+        }
+        .nav-link {
+            border-radius: 20px;
+        }
+        .nav-link:hover {
+            background-color: black;
+            color: #fff;
         }
     </style>
