@@ -3,14 +3,14 @@
         <div class="container">
         <div class="card">
             <div class="content">
-                <div class="card-img"><img src="../assets/logo.png"></div>
+                <div class="card-img"><img :src="project.image"></div>
                 <div class="description-content">
-                    <h3>The projects name stuffs</h3>
+                    <h3>{{ project.name }}</h3>
                 </div>
             </div>
             <ul class="more-words-content">
-                <li style="--i:1"><a href="#"><img src="https://i.postimg.cc/vBm857GY/icons8-octocat-50.png"></a></li>
-                <li style="--i:2"><a href="#"><img src="https://i.postimg.cc/mDq4M0dj/icons8-website-100.png" width="50px"></a></li>
+                <li style="--i:1"><a :href="project.github"><img src="https://i.postimg.cc/vBm857GY/icons8-octocat-50.png"></a></li>
+                <li style="--i:2"><a :href="project.netlify"><img src="https://i.postimg.cc/mDq4M0dj/icons8-website-100.png"></a></li>
             </ul>
         </div>
     </div>
@@ -19,12 +19,12 @@
 
 <script>
     export default {
-
+        props: ["project"]
     }
 </script>
 
 <style scoped>
-    .section {
+    /* .section {
         position: relative;
     }
 
@@ -43,9 +43,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-    }
+    } */
     .container {
-        margin-top: 150px !important;
+        /* margin-top: 150px !important; */
         position: relative;
         z-index:  1;
         display: flex;
