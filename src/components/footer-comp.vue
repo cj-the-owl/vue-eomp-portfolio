@@ -18,7 +18,7 @@
 
 <style scoped>
     .footer {
-        position: absolute;
+            position: absolute;
             bottom: 20px;
             right: 20px;
             left: 20px;
