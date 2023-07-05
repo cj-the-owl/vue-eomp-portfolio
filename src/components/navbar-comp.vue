@@ -38,10 +38,10 @@
 
     <style>
         #navBar {
-            position: absolute;
+            position: relative;
             top: 20px;
-            right: 20px;
-            left: 20px;
+            /* right: 20px; */
+            /* left: 20px; */
             padding: 20px 50px;
             display: flex;
             justify-content: space-between;

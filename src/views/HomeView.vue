@@ -20,8 +20,7 @@ export default {
 
 <style scoped>
   #container {
-
-    width: calc(100% - 400px);
+    width: calc(100% - 200px);
     min-height: 400px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
@@ -30,7 +29,8 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 50px;
-    margin-top: 150px;
+    margin: 90px;
+    border: 1px solid #fff;
 }
 
 template {
@@ -63,7 +63,6 @@ template {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   padding: 40px;
-
   animation: animate 5s linear infinite;
 }
 @keyframes animate {

@@ -18,10 +18,10 @@
 
 <style scoped>
     .footer {
-            position: absolute;
+            position: relative;
             bottom: 20px;
-            right: 20px;
-            left: 20px;
+            /* right: 20px;
+            left: 20px; */
             padding: 20px;
             display: flex;
             justify-content: space-between;
