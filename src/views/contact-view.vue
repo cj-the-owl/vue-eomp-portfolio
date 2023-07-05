@@ -49,4 +49,9 @@
         background-color: #fff !important;
         color:black !important;
     }
+
+    button:hover {
+        background-color: black !important;
+        color: #fff !important;
+    }
 </style>
