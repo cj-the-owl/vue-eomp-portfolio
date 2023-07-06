@@ -1,22 +1,45 @@
 import { createStore } from 'vuex'
 
-const dataURL = ''
 export default createStore({
   state: {
     projects: null,
+    testimonials: null,
   },
   
   mutations: {
-    setProjects: (state, projects) => {
-      state.projects = projects;
+    setProjects: (state, value) => {
+      state.projects = value
+    },
+    setTestimonials: (state, value) => {
+      state.testimonials = value
     }
   },
   actions: {
-    getProjects: async (context) => {
-      fetch("https://cj-the-owl.github.io/eomp-data/projects.json")
-      .then((res) => res.json())
-      .then((projects)=> context.commit("setProjects", projects));
-    }
+       async fetchProjects(context) {
+      try{
+        let {projects} = await (await fetch("https://cj-the-owl.github.io/eomp-data/eomp-db.json")).json()
+        if (projects) {
+          context.commit ("setProjects", projects)
+        } else {
+          alert("error")
+        }
+      }
+      catch(e) {
+        console.error(error)
+      }
   },
-  
-})
+       async fetchTestimonials(context) {
+      try{
+        let {testimonials} = await (await fetch("https://cj-the-owl.github.io/eomp-data/eomp-db.json")).json()
+        if (testimonials) {
+          context.commit ("setTestimonials", testimonials)
+        } else {
+          alert("error")
+        }
+      }
+      catch(e) {
+        console.error(error)
+      }
+  },
+}
+});

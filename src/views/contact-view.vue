@@ -30,7 +30,8 @@
 
 <style scoped>
     #container {
-        margin-top: 150px !important;
+        margin-top: 100px !important;
+        margin-bottom: 100px;
         border: 1px solid #fff;
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.5);
