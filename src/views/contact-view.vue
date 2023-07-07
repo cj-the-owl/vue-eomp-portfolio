@@ -58,11 +58,18 @@
         color: #fff !important;
     }
 
+    @media screen and (max-width: 700px) {
+        #container {
+            width: 550px;
+            padding: 10px !important;
+            margin-left: 30;
+        }
+    }
     @media screen and (max-width: 400px) {
         #container {
-            width: 190px;
-            padding: 0 !important;
-            margin-left: 0;
+            width: 250px;
+            padding: 5px !important;
+            margin-left: 30;
         }
     }
 </style>

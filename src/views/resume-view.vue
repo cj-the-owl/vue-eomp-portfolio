@@ -24,46 +24,46 @@
         <h1>Hard Skills</h1>
         <div class="hard-skills">
             <div>
-                <p style="width: 100%" data-value="90">HTML 90%</p>
+                <p style="width: 100%" data-value="90">HTML: Expert</p>
                 <progress max="100" value="90"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="90">CSS 90%</p>
+                <p style="width: 100%" data-value="90">CSS: Expert</p>
                 <progress max="100" value="90"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="65">JavaScript 65%</p>
+                <p style="width: 100%" data-value="65">JavaScript: Intermediate</p>
                 <progress max="100" value="65"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="80">Bootstrap 80%</p>
+                <p style="width: 100%" data-value="80">Bootstrap: Advanced</p>
                 <progress max="100" value="80"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="70">Vue.js 70%</p>
+                <p style="width: 100%" data-value="70">Vue.js: Intermediate</p>
                 <progress max="100" value="70"></progress>
             </div>
         </div>
         <h1 class="mt-3">Soft Skills</h1>
         <div class="soft-skills">
             <div>
-                <p style="width: 100%" data-value="80">Communication 85%</p>
+                <p style="width: 100%" data-value="80">Communication: Advanced</p>
                 <progress max="100" value="80"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="80">Team 90%</p>
+                <p style="width: 100%" data-value="80">Team skills: Expert</p>
                 <progress max="100" value="90"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="90">Adaptability 90%</p>
+                <p style="width: 100%" data-value="90">Adaptability: Expert</p>
                 <progress max="100" value="90"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="80">Leadership 80%</p>
+                <p style="width: 100%" data-value="80">Leadership: Advanced</p>
                 <progress max="100" value="80"></progress>
             </div>
             <div>
-                <p style="width: 100%" data-value="80">Problem-solving 80%</p>
+                <p style="width: 100%" data-value="80">Problem-solving: Advanced</p>
                 <progress max="100" value="80"></progress>
             </div>
         </div>
@@ -162,6 +162,25 @@
         right: 0;
         top: -125%;
         color: black
+}
+
+@media screen and (max-width: 700px) {
+    #timeline2 .content {
+        font-size: 12px;
+    }
+
+    progress {
+        width: 250px !important;
+    }
+}
+@media screen and (max-width: 400px) {
+    #timeline2 .content {
+        font-size: 12px;
+    }
+
+    progress {
+        width: 250px !important;
+    }
 }
 
 

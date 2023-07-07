@@ -151,5 +151,46 @@ export default {
     .box:hover .elements.words p {
         opacity: 1;
     }
+
+    
+    @media screen and (max-width: 900px) {
+        .container {
+            max-width: 700px;
+        }
+
+        .box {
+            margin: 25px;
+        }
+
+        .elements.words {
+            width: 83%;
+        }
+
+        .elements.p-name {
+            left: 55px;
+        }
+
+        .elements.words p {
+            font-size: 0.72rem;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .container {
+            display: grid;
+            grid-template-columns: auto ;
+            width: 70%;
+            margin-left: -25px;
+            padding-left: 1px;
+        }
+
+        .elements.p-name {
+            left: 100px;
+        }
+
+        .elements.person-img {
+            left: 30px;
+        }
+    }
 </style>
 

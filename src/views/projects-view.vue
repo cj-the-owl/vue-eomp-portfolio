@@ -10,8 +10,8 @@
                 </div>
             </div>
             <ul class="more-words-content">
-                <li style="--i:1"><a :href="project.github"><img src="https://i.postimg.cc/vBm857GY/icons8-octocat-50.png"></a></li>
-                <li style="--i:2"><a :href="project.netlify"><img src="https://i.postimg.cc/mDq4M0dj/icons8-website-100.png"></a></li>
+                <li style="--i:1"><a target="_blank" :href="project.github"><img src="https://i.postimg.cc/vBm857GY/icons8-octocat-50.png"></a></li>
+                <li style="--i:2"><a target="_blank" :href="project.netlify"><img src="https://i.postimg.cc/mDq4M0dj/icons8-website-100.png"></a></li>
             </ul>
         </div>
 
@@ -50,6 +50,8 @@ export default {
         justify-content: center;
         align-items: center;
         flex-wrap:wrap;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .container .card {
@@ -85,7 +87,8 @@ export default {
         height: 150px;
         border-radius: 50%;
         overflow: hidden;
-        border: 10px solid rgba(0, 0, 0, 0.25);
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        margin-top: 5px;
     }
 
     .container .card .content .card-img img {
@@ -102,7 +105,7 @@ export default {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 13px;
         text-align: center;
         margin: 20px 0 10px;
         line-height: 1.1em;
@@ -110,19 +113,31 @@ export default {
 
     .container .card .more-words-content {
         position: absolute;
-        bottom: 50px;
+        bottom: 5px;
         display: flex;
+
     }
 
     .container .card li {
         list-style: none;
         margin: 0 10px;
-        transform: translateY(40px);
+        transform: translateY(30px);
         transition: 0.5s;
         transition-delay: calc(0.1s * var(--i));
+        height: 50px;
     }
 
     .container .card:hover li {
         transform: translateY(0px);
+    }
+
+    .more-words-content img {
+        height: 40px;
+    }
+
+    @media screen and (max-width: 300px) {
+        .container .card {
+            width: 250px;
+        }
     }
 </style>
