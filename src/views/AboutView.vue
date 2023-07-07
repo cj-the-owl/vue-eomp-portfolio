@@ -137,9 +137,9 @@
       padding: 0;
     }
 
-    #main {
+    /* #main {
       margin-right: 50px !important;
-    }
+    } */
   }
   @media screen and (max-width: 550px) {
     template {
@@ -168,5 +168,15 @@
     .fst-italic {
       width: 100px;
     }
+
+    #main {
+      /* width: 300px; */
+      margin-right: 0 !important;
+    }
+
+    #details {
+      word-wrap: break-word;
+    }
+
   }
 </style>

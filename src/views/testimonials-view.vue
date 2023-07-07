@@ -114,16 +114,16 @@ export default {
         backdrop-filter: blur(0px);
         border: none;
         box-shadow: none;
-        transition: 0.5s;
+        /* transition: 0.5s;
         opacity: 0;
-        transition-delay: 0.25s;
+        transition-delay: 0.25s; */
     }
 
-    .box:hover .elements.p-name {
+    /* .box:hover .elements.p-name {
         top: 80px;
         opacity: 1;
 
-    }
+    } */
 
     .elements.words {
         top:initial;
@@ -142,7 +142,7 @@ export default {
 
     .elements.words p {
         position: relative;
-        font-size: 0.85em;
+        font-size: 0.80em;
         transition: 0.5s;
         opacity: 0;
         transition-delay: 0.5s;
