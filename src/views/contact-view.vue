@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid p-5" id="container">
-        <div class="row">
+        <form action="https://formspree.io/f/xyyqyklw" method="POST">
+            <div class="row">
             <div class="col">
                 <label for="first name" class="form-label text-black fw-bolder">First Name</label>
                 <input type="text" class="form-control" id="first name" name="first name" placeholder="First name" aria-label="First name" required>
@@ -19,6 +20,7 @@
                 <textarea class="form-control" id="message" name="message" placeholder="Enter message here" rows="3"></textarea>
                 <button class="btn bg-black text-bg-primary mt-3" type="submit">Submit</button>
         </div>
+        </form>
     </div>      
 </template>
 
