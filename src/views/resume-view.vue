@@ -1,17 +1,26 @@
 <template>
-    <div v-if="educations" class="container py-4">
+    <div class="container py-4">
         <div class="row align-items-md-stretch">
-            <div class="col-md-6" id="timeline">
+            <div v-if="educations" class="col-md-6" id="timeline">
                 <div v-for="education in educations" :key="education.year" class="content">
                     <h4>{{ education.year }}</h4>
                     <h5>{{ education.place }}</h5>
                     <p>{{ education.des }}</p>
                 </div>
             </div>
-            <div class="col-md-6"></div>
+            <div v-else>Hang on...</div>
+
+            <div v-if="experiences" class="col-md-6" id="timeline2">
+                <div v-for="experience in experiences" :key="experience.place" class="content">
+                    <h4>{{ experience.place }}</h4>
+                    <h5>{{ experience.roles }}</h5>
+                    <p>{{ experience.des }}</p>
+                    <p>{{ experience.time }}</p>
+                </div>
+            </div>
+            <div v-else>Hang on...</div>
         </div>
     </div>
-    <div v-else>Hang on...</div>
 </template>
 
 <script>
@@ -19,19 +28,29 @@
         computed: {
             educations() {
                 return this.$store.state.educations
+            },
+            experiences() {
+                return this.$store.state.experiences
             }
         },
 
         mounted() {
             this.$store.dispatch("fetchEducations")
+            this.$store.dispatch("fetchExperiences")
         },
     }
 </script>
 
 <style scoped>
     #timeline {
-        /* margin: 90px auto; */
+        margin: 90px auto;
         width: 360px;
+        border-left: 6px solid rgba(255, 255, 255, 0.5);
+        padding: 0 20px 0 30px;
+    }
+    #timeline2 {
+        margin: 90px auto;
+        width: 400px;
         border-left: 6px solid rgba(255, 255, 255, 0.5);
         padding: 0 20px 0 30px;
     }
@@ -45,8 +64,9 @@
         border-radius: 20px;
         line-height: 1.7;
         position: relative;
-        height: 150px;
+        height: 320px;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .content::before {
