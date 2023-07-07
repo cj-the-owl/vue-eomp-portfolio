@@ -6,6 +6,7 @@
                 <div class="card-img"><img :src="project.image"></div>
                 <div class="description-content">
                     <h3>{{ project.name }}</h3>
+                    <p>{{ project.des }}</p>
                 </div>
             </div>
             <ul class="more-words-content">

@@ -55,4 +55,12 @@
         background-color: black !important;
         color: #fff !important;
     }
+
+    @media screen and (max-width: 400px) {
+        #container {
+            width: 190px;
+            padding: 0 !important;
+            margin-left: 0;
+        }
+    }
 </style>

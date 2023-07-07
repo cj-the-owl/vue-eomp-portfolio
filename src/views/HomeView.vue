@@ -4,7 +4,7 @@
                 <h2>Hello!</h2>
                 <h3>I'm Caryn Lodewyk</h3>
                 <h4>An aspiring full stack developer</h4>
-                <button type="button" class="btn mt-2" id="more-button">More about me!</button>
+                <a href="/about"><button type="button" class="btn mt-2" id="more-button">More about me!</button></a>
             </div>
   </div>
 </template>
@@ -74,6 +74,11 @@ template {
   }
 }
 
-
+@media screen and (max-width: 360px) {
+  #container {
+    width: 200px;
+    margin: 50px;
+  }
+}
 
 </style>
