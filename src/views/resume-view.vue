@@ -1,37 +1,48 @@
 <template>
-    <div class="container py-4">
+    <div v-if="educations" class="container py-4">
         <div class="row align-items-md-stretch">
             <div class="col-md-6" id="timeline">
-                <div class="content">
-                    <h2>time/year</h2>
-                    <h3>place</h3>
-                    <p>des</p>
+                <div v-for="education in educations" :key="education.year" class="content">
+                    <h4>{{ education.year }}</h4>
+                    <h5>{{ education.place }}</h5>
+                    <p>{{ education.des }}</p>
                 </div>
             </div>
             <div class="col-md-6"></div>
         </div>
     </div>
+    <div v-else>Hang on...</div>
 </template>
 
 <script>
     export default {
+        computed: {
+            educations() {
+                return this.$store.state.educations
+            }
+        },
 
+        mounted() {
+            this.$store.dispatch("fetchEducations")
+        },
     }
 </script>
 
 <style scoped>
     #timeline {
-        margin: 90px auto;
+        /* margin: 90px auto; */
         width: 360px;
-        border-left: 4px solid #fff;
+        border-left: 6px solid rgba(255, 255, 255, 0.5);
         padding: 0 20px 0 30px;
     }
 
     .content {
-        background-color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
         padding: 10px 25px;
         font-size: 16px;
-        border: 2px solid white;
+        border: 1px solid #fff;
+        border-radius: 20px;
         line-height: 1.7;
         position: relative;
         height: 150px;
@@ -44,73 +55,11 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: #fff;
+        background-color: black;
         border: 3px solid #ddd;
         position: absolute;
         top: 10px;
         left: -40px;
-
-
-
     }
-    /* #timeline {
-        position: relative;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    #timeline::after {
-        content: '';
-        position: absolute;
-        width: 6px;
-        background-color: #fff;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -3px;
-    }
-
-    .container {
-        padding: 10px 40px;
-        position: relative;
-        background-color: inherit;
-        width: 50%;
-    }
-
-    .container::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        right: -17px;
-        background-color: #fff;
-        border: 4px solid brown;
-        top: 15px;
-        border-radius: 50%;
-        z-index: 1;
-    }
-
-    .left {
-        left: 0;
-    }
-
-    .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-} */
+    
 </style>
