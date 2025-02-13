@@ -2,9 +2,9 @@
     <footer class="footer">
         <div class="p-2">© Copyright 2023 cj-the-owl</div>
         <div class="color2">
-            <a target="_blank" class="px-2" href="https://www.instagram.com/cj.the.owl/"><img src="https://i.postimg.cc/tCSdv03R/icons8-instagram-50.png"></a>
-            <a target="_blank" class="px-2" href="https://github.com/cj-the-owl"><img src="https://i.postimg.cc/28MbBCdW/icons8-github-50.png"></a>
-            <a target="_blank" class="px-2" href="https://www.linkedin.com/in/caryn-jayn-lodewyk-411165276/"><img src="https://i.postimg.cc/sg5F9JWc/icons8-linkedin-50.png"></a>
+            <a target="_blank" class="px-2" href="https://www.instagram.com/cj.the.owl/"><img src="https://i.ibb.co/8ny6hzqX/icons8-instagram-50.png" alt="icons8-instagram-50" border="0"></a>
+            <a target="_blank" class="px-2" href="https://github.com/cj-the-owl"><img src="https://i.ibb.co/200qyPLg/icons8-github-50.png" alt="icons8-github-50" border="0"></a>
+            <a target="_blank" class="px-2" href="https://www.linkedin.com/in/caryn-jayn-lodewyk-411165276/"><img src="https://i.ibb.co/7dfNx1gR/icons8-linkedin-50.png" alt="icons8-linkedin-50" border="0"></a>
         </div>
         
     </footer>
